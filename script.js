@@ -1,9 +1,7 @@
 const projectDetails = {
-  competencehub: { title: 'Competence Hub', description: 'A connected platform with dedicated websites for the main hub, business services, and online learning.' },
-  personalportfolio: { title: 'Personal portfolio websites', description: 'Professional portfolio websites for individuals who want to present their skills, experience, services, and work clearly online.' }
+  competencehub: { title: 'Competence Hub', description: 'A connected platform with dedicated websites for school management, business services, and online learning.' }
 };
 
-const filterButtons = document.querySelectorAll('.filter-button');
 const projectCards = document.querySelectorAll('.project-card');
 const modal = document.querySelector('.project-modal');
 const modalTitle = document.querySelector('#modal-title');
@@ -15,16 +13,58 @@ const currentYear = document.querySelector('#current-year');
 
 currentYear.textContent = new Date().getFullYear();
 
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    filterButtons.forEach((item) => item.classList.remove('is-active'));
-    button.classList.add('is-active');
-    const filter = button.dataset.filter;
-    projectCards.forEach((card) => {
-      card.classList.toggle('is-hidden', filter !== 'all' && card.dataset.category !== filter);
+const heroCarousel = document.querySelector('.hero-carousel');
+if (heroCarousel) {
+  const slides = heroCarousel.querySelectorAll('[data-carousel-slide]');
+  const dots = heroCarousel.querySelectorAll('.carousel-dot');
+  const slideCount = heroCarousel.querySelector('[data-carousel-count]');
+  const counter = heroCarousel.querySelector('.carousel-count');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let activeSlide = 0;
+  let autoplayTimer;
+
+  const showSlide = (index) => {
+    activeSlide = index;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeSlide;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+      dots[slideIndex].classList.toggle('is-active', isActive);
+      dots[slideIndex].setAttribute('aria-pressed', String(isActive));
+    });
+    slideCount.textContent = String(activeSlide + 1).padStart(2, '0');
+    counter.setAttribute('aria-label', `Slide ${activeSlide + 1} of ${slides.length}`);
+  };
+
+  const stopAutoplay = () => {
+    window.clearInterval(autoplayTimer);
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    if (reducedMotion.matches || document.hidden || slides.length < 2) return;
+    autoplayTimer = window.setInterval(() => {
+      showSlide((activeSlide + 1) % slides.length);
+    }, 6000);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      startAutoplay();
     });
   });
-});
+
+  heroCarousel.addEventListener('mouseenter', stopAutoplay);
+  heroCarousel.addEventListener('mouseleave', startAutoplay);
+  heroCarousel.addEventListener('focusin', stopAutoplay);
+  heroCarousel.addEventListener('focusout', (event) => {
+    if (!heroCarousel.contains(event.relatedTarget)) startAutoplay();
+  });
+  document.addEventListener('visibilitychange', startAutoplay);
+  reducedMotion.addEventListener('change', startAutoplay);
+  startAutoplay();
+}
 
 projectCards.forEach((card) => {
   card.addEventListener('click', (event) => {
