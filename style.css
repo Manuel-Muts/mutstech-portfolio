@@ -536,6 +536,117 @@ h1 em {
   margin-bottom:5px;
   color:var(--muted);
 }
+.posters-section {
+  background:
+    radial-gradient(circle at 92% 18%, rgba(140,124,255,.18), transparent 30%),
+    linear-gradient(145deg, #211d30, #151419 68%);
+  color:var(--paper);
+}
+.posters-section .eyebrow {
+  color:var(--lime);
+}
+.posters-section .section-heading h2 span {
+  color:var(--coral);
+}
+.posters-section .section-note {
+  color:rgba(246,241,234,.72);
+}
+.poster-grid {
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:clamp(12px,2vw,24px);
+}
+.poster-grid-concepts {
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+.poster-concept-heading {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:32px;
+  margin:72px 0 24px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.16);
+}
+.poster-concept-heading .eyebrow {
+  margin:0;
+}
+.poster-concept-heading>p:last-child {
+  max-width:460px;
+  margin:0;
+  color:rgba(246,241,234,.72);
+  font-size:14px;
+  line-height:1.6;
+}
+.poster-card {
+  min-width:0;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  background:rgba(255,255,255,.055);
+  box-shadow:0 18px 38px rgba(0,0,0,.18);
+  transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.poster-card:hover {
+  transform:translateY(-7px);
+  border-color:rgba(217,255,104,.6);
+  background:rgba(255,255,255,.09);
+  box-shadow:0 24px 48px rgba(0,0,0,.28);
+}
+.poster-card:focus-visible {
+  outline:2px solid var(--lime);
+  outline-offset:4px;
+}
+.poster-art {
+  display:block;
+  overflow:hidden;
+  aspect-ratio:.68;
+  border-radius:14px;
+  background:linear-gradient(145deg, #f6f1ea, #ddd4c9);
+}
+.poster-art img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transition:transform .5s ease;
+}
+.poster-card:hover .poster-art img {
+  transform:scale(1.035);
+}
+.poster-caption {
+  display:grid;
+  gap:6px;
+  padding:15px 6px 7px;
+}
+.poster-caption strong {
+  font-size:clamp(14px,1.35vw,18px);
+  line-height:1.2;
+  letter-spacing:-.035em;
+}
+.poster-caption>span {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:rgba(246,241,234,.66);
+  font-family:var(--mono);
+  font-size:9px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.poster-caption>span span {
+  color:var(--lime);
+  font-size:16px;
+}
+.poster-cta {
+  display:table;
+  margin-top:38px;
+  border-color:rgba(255,255,255,.55);
+  color:var(--paper);
+}
+.poster-cta:hover {
+  color:var(--lime);
+  border-color:var(--lime);
+}
 .project-grid {
   display:grid;
   grid-template-columns:minmax(0, 1fr);
@@ -1122,6 +1233,33 @@ h1 em {
   }
   .section-note {
     margin-top:28px;
+  }
+  .poster-grid {
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:14px;
+  }
+  .poster-concept-heading {
+    display:block;
+    margin:54px 0 22px;
+  }
+  .poster-concept-heading>p:last-child {
+    margin-top:12px;
+  }
+  .poster-card {
+    padding:7px;
+    border-radius:17px;
+  }
+  .poster-art {
+    border-radius:11px;
+  }
+  .poster-caption {
+    padding:11px 4px 5px;
+  }
+  .poster-caption strong {
+    font-size:14px;
+  }
+  .poster-caption>span {
+    font-size:8px;
   }
   .project-grid {
     grid-template-columns:1fr;

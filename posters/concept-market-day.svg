@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1000" viewBox="0 0 700 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Market Day concept poster</title>
+  <desc id="desc">A warm, hand-drawn market day poster concept with a striped canopy and bold typography.</desc>
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1">
+      <stop stop-color="#fff2d8"/>
+      <stop offset="1" stop-color="#f4d7b1"/>
+    </linearGradient>
+    <pattern id="grain" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="7" r="1.4" fill="#704331" opacity=".13"/>
+      <circle cx="25" cy="24" r="1" fill="#704331" opacity=".1"/>
+    </pattern>
+  </defs>
+  <rect width="700" height="1000" fill="url(#paper)"/>
+  <rect width="700" height="1000" fill="url(#grain)"/>
+  <path d="M0 0h700v170H0z" fill="#173d35"/>
+  <text x="52" y="66" fill="#d9ff68" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">A LITTLE MORE LOCAL</text>
+  <text x="50" y="128" fill="#fff2d8" font-family="Arial,sans-serif" font-size="38" font-weight="900" letter-spacing="-1">GOOD THINGS GROW HERE</text>
+  <circle cx="554" cy="318" r="124" fill="#ff805e"/>
+  <path d="M104 464h492l-38-152H142z" fill="#173d35"/>
+  <path d="m142 312 492 0-12 57H130z" fill="#f6b94f"/>
+  <path d="m192 312 70 0-4 57h-80zM332 312h70v57h-70zM472 312h70l14 57h-80z" fill="#fff2d8"/>
+  <path d="M120 466h456v300H120z" fill="#c86446"/>
+  <path d="M178 515h340v192H178z" fill="#f4d7b1"/>
+  <path d="M224 706v-94a61 61 0 0 1 122 0v94M369 706v-94a61 61 0 0 1 122 0v94" fill="#173d35"/>
+  <path d="M78 782h546" stroke="#173d35" stroke-width="12" stroke-linecap="round"/>
+  <text x="55" y="226" fill="#173d35" font-family="Arial,sans-serif" font-size="92" font-weight="900" letter-spacing="-6">MARKET</text>
+  <text x="54" y="300" fill="#c64e36" font-family="Arial,sans-serif" font-size="92" font-weight="900" letter-spacing="-6">DAY.</text>
+  <text x="56" y="844" fill="#173d35" font-family="Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="2">MEET THE MAKERS. FIND YOUR FAVOURITE.</text>
+  <text x="57" y="891" fill="#704331" font-family="Arial,sans-serif" font-size="19" letter-spacing="1">A bright, local-first promotional poster concept</text>
+  <rect x="54" y="925" width="210" height="38" rx="19" fill="#173d35"/>
+  <text x="72" y="950" fill="#d9ff68" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">CONCEPT POSTER</text>
+  <text x="640" y="950" text-anchor="end" fill="#173d35" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">MUTSTECH</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1000" viewBox="0 0 700 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Creative Week concept poster</title>
+  <desc id="desc">A bold coral, lavender, and black poster concept celebrating ideas in motion.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#17151e"/>
+      <stop offset="1" stop-color="#302044"/>
+    </linearGradient>
+    <linearGradient id="orb" x2="1" y2="1">
+      <stop stop-color="#ff735f"/>
+      <stop offset="1" stop-color="#ffb552"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#f4eddf" opacity=".22"/>
+    </pattern>
+  </defs>
+  <rect width="700" height="1000" fill="url(#bg)"/>
+  <circle cx="590" cy="320" r="238" fill="url(#orb)"/>
+  <circle cx="590" cy="320" r="180" fill="url(#dots)"/>
+  <path d="M0 655 700 420v580H0Z" fill="#d9ff68"/>
+  <path d="m425 137 82-77 74 101-82 76z" fill="#b6a1ff"/>
+  <path d="m75 470 58-58 58 58-58 58z" fill="#f4eddf"/>
+  <text x="62" y="72" fill="#d9ff68" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="4">MUTSTECH / CREATIVE STUDIO</text>
+  <text x="58" y="230" fill="#f4eddf" font-family="Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-7">IDEAS</text>
+  <text x="58" y="339" fill="#ff735f" font-family="Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-7">IN</text>
+  <text x="58" y="447" fill="#f4eddf" font-family="Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-7">MOTION.</text>
+  <text x="64" y="726" fill="#17151e" font-family="Arial,sans-serif" font-size="70" font-weight="900" letter-spacing="-3">CREATIVE</text>
+  <text x="64" y="803" fill="#17151e" font-family="Arial,sans-serif" font-size="70" font-weight="900" letter-spacing="-3">WEEK</text>
+  <text x="68" y="858" fill="#302044" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="2">MAKE SOMETHING THAT MOVES.</text>
+  <rect x="64" y="910" width="222" height="38" rx="19" fill="#17151e"/>
+  <text x="81" y="935" fill="#d9ff68" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">CONCEPT POSTER</text>
+  <text x="638" y="932" text-anchor="end" fill="#302044" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">MUTSTECH</text>
+</svg>
